@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './../styles//mobile-menu.module.css';
 import useDelayedRender from '../hooks/useDelayedRender';
-import cn from 'classnames';
 
 export default function MobileMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,16 +43,11 @@ export default function MobileMenu() {
 
       {isMenuMounted && (
         <ul
-          className={cn(
-            styles.menu,
-            'flex flex-col absolute bg-gray-100 dark:bg-gray-900',
-            isMenuRendered && styles.menuRendered
-          )}
-          /* className={`${
+          className={`${
             styles.menu
           } flex flex-col absolute bg-gray-100 dark:bg-gray-900 ${
             isMenuRendered ? styles.menuRendered : ''
-          }`} */
+          }`}
         >
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
