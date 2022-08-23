@@ -14,9 +14,9 @@ function NavItem({ href, text }: { href: string; text: string }) {
       <a
         className={`${
           isActive
-            ? 'font-semibold text-gray-800 dark:text-gray-200'
-            : 'font-normal text-gray-600 dark:text-gray-400'
-        } hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all`}
+            ? 'font-semibold text-light-theme-1 dark:text-dark-theme-1'
+            : 'font-normal text-light-theme-1 dark:text-stone-400'
+        } hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-700 hover:dark:text-dark-theme-1 transition-all`}
       >
         <span className="capsize">{text}</span>
       </a>
@@ -30,10 +30,11 @@ export default function Layout(props: { children: ReactElement }) {
 
   // After mounting, we have access to the theme
   useEffect(() => setMounted(true), []);
+
   return (
     <>
       <div className="flex flex-col justify-center px-8">
-        <nav className="flex items-center justify-between w-full relative max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-white  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
+        <nav className="flex items-center justify-between w-full relative max-w-2xl border-stone-200 dark:border-stone-700 mx-auto pt-8 pb-8 sm:pb-16  text-light-theme-1 dark:text-dark-theme-1 bg-light-theme-0  dark:bg-dark-theme-0 bg-opacity-60">
           <div className="ml-[-0.60rem]">
             <MobileMenu />
             <NavItem href="/" text="Home" />
@@ -45,7 +46,7 @@ export default function Layout(props: { children: ReactElement }) {
           <button
             aria-label="Toggle Dark Mode"
             type="button"
-            className="w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
+            className="w-9 h-9 bg-stone-200 rounded-lg dark:bg-stone-600 flex items-center justify-center  hover:ring-2 ring-stone-300 transition-all"
             onClick={() => {
               setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
             }}
@@ -56,7 +57,7 @@ export default function Layout(props: { children: ReactElement }) {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                className="w-5 h-5 text-gray-800 dark:text-gray-200"
+                className="w-5 h-5 text-stone-800 dark:text-stone-200"
               >
                 {resolvedTheme === 'dark' ? (
                   <path
@@ -78,7 +79,7 @@ export default function Layout(props: { children: ReactElement }) {
           </button>
         </nav>
       </div>
-      <main className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900">
+      <main className="flex flex-col justify-center px-8 bg-light-theme-0 dark:bg-dark-theme-0">
         {props.children}
         {/* <Footer /> */}
       </main>
