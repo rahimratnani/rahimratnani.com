@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useTheme } from 'next-themes';
 
 import MobileMenu from '../MobileMenu';
+import Footer from '../Footer';
 
 function NavItem({ href, text }: { href: string; text: string }) {
   const router = useRouter();
@@ -81,7 +82,7 @@ export default function Layout(props: { children: ReactElement }) {
       </div>
       <main className="flex flex-col justify-center px-8 bg-light-theme-0 dark:bg-dark-theme-0">
         {props.children}
-        {/* <Footer /> */}
+        <Footer />
       </main>
     </>
   );

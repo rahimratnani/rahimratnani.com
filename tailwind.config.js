@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -18,6 +20,12 @@ module.exports = {
           1: 'rgb(218, 218, 219)',
           2: 'rgb(155, 156, 157)',
         },
+        'highlight-light': 'rgba(255, 153, 79, 0.45)',
+        'highlight-dark': 'rgba(255, 153, 79, 0.8)',
+      },
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        // inter: ['"Inter var"', ...defaultTheme.fontFamily.sans],
       },
     },
   },

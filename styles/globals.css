@@ -2,9 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Inter-roman.var.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('/fonts/Inter-italic.var.woff2') format('woff2');
+}
+
 ::selection {
-  background-color: #a5f3fc;
-  color: #1c1917;
+  /* background-color: rgba(255, 153, 79, 0.45); */
+  /* background-color: #a5f3fc; */
+  /* color: #1c1917; */
+  @apply bg-highlight-light dark:bg-highlight-dark text-light-theme-1 dark:text-white;
 }
 
 html {
