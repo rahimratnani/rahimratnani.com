@@ -40,30 +40,12 @@ export default function Footer() {
             <span className="sr-only">linkedin</span>
             <LinkedIn className="fill-current text-stone-600 hover:text-stone-900 dark:text-stone-200 dark:hover:text-stone-400 h-6 w-6" />
           </a>
-          {/* <SocialIcon
-            kind="github"
-            href="https://github.com/rahimratnani"
-            size={6}
-          />
-          <SocialIcon
-            kind="mail"
-            href="mailto:rahimratnani4@gmail.com"
-            size={6}
-          />
-          <SocialIcon
-            kind="linkedin"
-            href="https://www.linkedin.com/in/rahim-ratnani"
-            size={6}
-          /> */}
         </div>
 
         <div className="mb-2 flex space-x-2 text-sm text-stone-500 dark:text-stone-400">
           <div>{`© ${new Date().getFullYear()}`}</div>
-          {/* <div>{`© ${new Date().getFullYear()}`}</div> */}
           <span>{` • `}</span>
-          <div>Rahim Ratnani. All Rights Reserved.</div>
-          {/* <span>{` • `}</span> */}
-          {/* <div>All Rights Reserved.</div> */}
+          <Link href="/">Rahim Ratnani. All Rights Reserved.</Link>
         </div>
       </div>
     </footer>
