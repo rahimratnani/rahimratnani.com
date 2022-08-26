@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Home: NextPage = () => {
   return (
     <Layout>
-      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+      <div className="flex flex-col justify-center items-start max-w-2xl border-stone-200 dark:border-stone-700 mx-auto pb-16">
         <section className="flex flex-col items-center space-y-5 pt-8 sm:pt-12 text-light-theme-1 dark:text-dark-theme-1">
           <div className="h-[120px] w-[120px] bg-gray-400 rounded-full" />
 

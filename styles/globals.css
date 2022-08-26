@@ -29,6 +29,7 @@
 html {
   min-width: 360px;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #__next {
