@@ -20,9 +20,6 @@
 }
 
 ::selection {
-  /* background-color: rgba(255, 153, 79, 0.45); */
-  /* background-color: #a5f3fc; */
-  /* color: #1c1917; */
   @apply bg-highlight-light dark:bg-highlight-dark text-light-theme-1 dark:text-white;
 }
 
