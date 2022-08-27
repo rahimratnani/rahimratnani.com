@@ -12,14 +12,14 @@ const About: NextPage = () => {
         </div>
 
         <div className="w-full pt-8">
-          <h2 className="font-bold text-3xl tracking-tight text-light-theme-1 dark:text-dark-theme-1">
+          <h2 className="font-bold text-2xl sm:text-3xl tracking-tight text-light-theme-1 dark:text-dark-theme-1">
             Heading 1
           </h2>
           <h3 className="font-bold text-xl tracking-tight text-light-theme-1 dark:text-dark-theme-1">
             Sub-heading 1
           </h3>
 
-          <p className="mb-3">
+          <p className="mb-3 text-base">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
             atque enim corrupti at animi ratione. Eum architecto ad sunt nisi
             cum cupiditate vel rem dolor libero et adipisci, a soluta excepturi
@@ -28,13 +28,13 @@ const About: NextPage = () => {
             aspernatur hic.
           </p>
 
-          <p className="mb-3">
+          <p className="mb-3 text-base">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Accusantium deleniti recusandae quae eaque labore sunt vitae quaerat
             optio obcaecati adipisci?
           </p>
 
-          <p className="mb-3">
+          <p className="mb-3 text-base">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium
             repellendus nihil amet quam exercitationem nemo nam earum, eum
             voluptatibus architecto. Vero commodi modi placeat facilis nobis at
@@ -42,7 +42,7 @@ const About: NextPage = () => {
             dolores odit aspernatur? Tempora, quisquam dolore.
           </p>
 
-          <p className="mb-3">
+          <p className="mb-3 text-base">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore,
             distinctio exercitationem illum commodi ea ullam. Sunt possimus
             quisquam, ipsam amet ea doloremque eius fugit ab numquam cumque, rem
