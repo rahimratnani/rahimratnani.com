@@ -41,7 +41,15 @@ export default function Layout(props: { children: ReactElement }) {
             <NavItem href="/" text="Home" />
             <NavItem href="/about" text="About" />
             <NavItem href="/projects" text="Projects" />
-            <NavItem href="/resume" text="Resume" />
+            {/* Resume Link */}
+            <a
+              className="font-normal text-light-theme-1 dark:text-stone-400 hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-700 hover:dark:text-dark-theme-1 transition-all cursor-pointer"
+              href="https://drive.google.com/file/d/1aJLItUUP6N5ppNxFqh2ZfvN16mGWZ9h3/view?usp=sharing"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span className="capsize">{'Resume'}</span>
+            </a>
           </div>
           {/* Dark mode button */}
           <button
