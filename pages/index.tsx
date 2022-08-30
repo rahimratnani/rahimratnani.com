@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import Image from 'next/image';
 import Layout from '../components/layout';
 import Link from 'next/link';
 
@@ -7,7 +8,14 @@ const Home: NextPage = () => {
     <Layout>
       <div className="flex flex-col justify-center items-start max-w-2xl border-stone-200 dark:border-stone-700 mx-auto pb-16">
         <section className="flex flex-col items-center space-y-5 pt-8 sm:pt-12 text-light-theme-1 dark:text-dark-theme-1">
-          <div className="h-[120px] w-[120px] bg-gray-400 rounded-full" />
+          <Image
+            src="/images/me.jpg"
+            alt="Rahim Ratnani"
+            height={120}
+            width={120}
+            // objectFit="cover"
+            className="h-[120px] w-[120px] rounded-full"
+          />
 
           <h1 className="font-bold text-5xl sm:text-6xl text-center py-2">
             <span className="block mb-4 sm:inline sm:mb-0">Rahim</span> Ratnani
