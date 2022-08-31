@@ -5,7 +5,8 @@ interface Props {
   title: string;
   description: string;
   imgSrc: string;
-  href: string;
+  live: string;
+  github: string;
   techStack: string[];
 }
 
@@ -13,7 +14,8 @@ export default function Card({
   title,
   description,
   imgSrc,
-  href,
+  live,
+  github,
   techStack,
 }: Props) {
   return (
@@ -44,14 +46,32 @@ export default function Card({
             ))}
           </ul>
 
-          <Link href={href}>
-            <a
-              className="text-base font-medium leading-6 text-light-theme-1 dark:text-dark-theme-1"
-              aria-label={`Link to ${title}`}
-            >
-              Learn more &rarr;
-            </a>
-          </Link>
+          <div className="w-full flex flex-col space-y-2">
+            <Link href={live}>
+              <a
+                className="text-base font-medium leading-6 text-light-theme-1 dark:text-dark-theme-1 group"
+                aria-label={`Link to ${title}`}
+                target="_blank"
+              >
+                Live{' '}
+                <span className="group-hover:pl-1 transition-all duration-300">
+                  &rarr;
+                </span>
+              </a>
+            </Link>
+            <Link href={github}>
+              <a
+                className="text-base font-medium leading-6 text-light-theme-1 dark:text-dark-theme-1 group"
+                aria-label={`Link to ${title}`}
+                target="_blank"
+              >
+                GitHub{' '}
+                <span className="group-hover:pl-1 transition-all duration-300">
+                  &rarr;
+                </span>
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

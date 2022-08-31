@@ -21,7 +21,8 @@ const Projects: NextPage = () => {
                 title={d.title}
                 description={d.description}
                 imgSrc={d.imgSrc}
-                href={d.href}
+                live={d.live}
+                github={d.github}
                 techStack={d.tectStack}
               />
             ))}
