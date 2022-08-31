@@ -78,7 +78,14 @@ export default function MobileMenu() {
             style={{ transitionDelay: '250ms' }}
           >
             <Link href="/resume">
-              <a className="flex w-auto pb-4">Resume</a>
+              <a
+                className="flex w-auto pb-4"
+                href="https://drive.google.com/file/d/1aJLItUUP6N5ppNxFqh2ZfvN16mGWZ9h3/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Resume
+              </a>
             </Link>
           </li>
         </ul>
