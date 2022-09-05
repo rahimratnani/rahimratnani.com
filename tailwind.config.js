@@ -28,7 +28,23 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            'ul > li::marker': {
+              color: theme('colors[light-theme][1]'),
+            },
+          },
+        },
+        invert: {
+          css: {
+            'ul > li::marker': {
+              color: theme('colors[dark-theme][1]'),
+            },
+          },
+        },
+      }),
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
