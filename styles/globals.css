@@ -44,6 +44,7 @@ html {
 
 .capsize::after {
   content: '';
-  margin-top: -0.219em;
+  margin-top: -0.098em;
+  /* margin-top: -0.219em; */
   display: table;
 }

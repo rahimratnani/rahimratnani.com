@@ -30,7 +30,7 @@ const Home: NextPage = () => {
           <div className="pt-14 sm:px-4">
             <p className="text-center text-base sm:text-lg">
               I&apos;m a full-stack web developer from India. Though keeps
-              shifting, my current focus is React.js, Node.js, and TypeScript.
+              changing, my current focus is React.js, Node.js, and TypeScript.
             </p>
           </div>
 
