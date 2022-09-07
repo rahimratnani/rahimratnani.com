@@ -1,4 +1,4 @@
-import { ReactElement, useState, useEffect } from 'react';
+import { ReactNode, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
@@ -25,12 +25,26 @@ function NavItem({ href, text }: { href: string; text: string }) {
   );
 }
 
-export default function Layout(props: { children: ReactElement }) {
+interface LayoutProps {
+  children: ReactNode | ReactNode[];
+  title?: string;
+  description?: string;
+}
+
+export default function Layout(props: LayoutProps) {
+  const { children, ...metaData } = props;
+
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
   // After mounting, we have access to the theme
   useEffect(() => setMounted(true), []);
+
+  const meta = {
+    title: 'Rahim Ratnani – Full-Stack Web Developer.',
+    description: 'Full-Stack Web Developer and JavaScript enthusiast.',
+    ...metaData,
+  };
 
   return (
     <>
@@ -89,7 +103,7 @@ export default function Layout(props: { children: ReactElement }) {
         </nav>
       </div>
       <main className="flex flex-col justify-center px-8 bg-light-theme-0 dark:bg-dark-theme-0">
-        {props.children}
+        {children}
         <Footer />
       </main>
     </>
