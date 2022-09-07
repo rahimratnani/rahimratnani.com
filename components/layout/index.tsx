@@ -2,6 +2,7 @@ import { ReactNode, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
+import Head from 'next/head';
 
 import MobileMenu from '../MobileMenu';
 import Footer from '../Footer';
@@ -32,7 +33,8 @@ interface LayoutProps {
 }
 
 export default function Layout(props: LayoutProps) {
-  const { children, ...metaData } = props;
+  const { children, ...customMeta } = props;
+  const router = useRouter();
 
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
@@ -43,11 +45,29 @@ export default function Layout(props: LayoutProps) {
   const meta = {
     title: 'Rahim Ratnani – Full-Stack Web Developer.',
     description: 'Full-Stack Web Developer and JavaScript enthusiast.',
-    ...metaData,
+    type: 'website',
+    ...customMeta,
   };
 
   return (
     <>
+      <Head>
+        <title>{meta.title}</title>
+        <meta name="robots" content="follow, index" />
+        <meta name="description" content={meta.description} />
+        <meta
+          property="og:url"
+          content={`https://rahimratnani.com${router.asPath}`}
+        />
+        <link
+          rel="canonical"
+          href={`https://rahimratnani.com${router.asPath}`}
+        />
+        <meta property="og:type" content={meta.type} />
+        <meta property="og:site_name" content="Rahim Ratnani" />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+      </Head>
       <div className="flex flex-col justify-center px-8">
         <nav className="flex items-center justify-between w-full relative max-w-2xl border-stone-200 dark:border-stone-700 mx-auto pt-8 pb-8 sm:pb-16  text-light-theme-1 dark:text-dark-theme-1 bg-light-theme-0  dark:bg-dark-theme-0 bg-opacity-60">
           <div className="ml-[-0.60rem]">
