@@ -42,7 +42,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="mb-2 flex space-x-2 text-sm text-stone-500 dark:text-stone-400">
+        <div className="mb-2 flex flex-wrap justify-center space-x-2 text-sm text-stone-500 dark:text-stone-400">
           <div>{`© ${new Date().getFullYear()}`}</div>
           <span>{` • `}</span>
           <Link href="/">Rahim Ratnani. All Rights Reserved.</Link>
