@@ -16,9 +16,9 @@ function NavItem({ href, text }: { href: string; text: string }) {
       <a
         className={`${
           isActive
-            ? 'font-semibold text-light-theme-1 dark:text-dark-theme-1'
-            : 'font-normal text-light-theme-1 dark:text-stone-400'
-        } hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-700 hover:dark:text-dark-theme-1 transition-all`}
+            ? 'font-semibold text-primary hover:text-primary'
+            : 'font-normal text-zinc-600 dark:text-zinc-400 hover:text-zinc-800 '
+        } hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all`}
       >
         <span className="capsize">{text}</span>
       </a>
@@ -68,8 +68,8 @@ export default function Layout(props: LayoutProps) {
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
       </Head>
-      <div className="flex flex-col justify-center px-8">
-        <nav className="flex items-center justify-between w-full relative max-w-2xl border-stone-200 dark:border-stone-700 mx-auto pt-8 pb-8 sm:pb-16  text-light-theme-1 dark:text-dark-theme-1 bg-light-theme-0  dark:bg-dark-theme-0 bg-opacity-60">
+      <div className="flex flex-col justify-center px-8 bg-theme-light dark:bg-theme-dark">
+        <nav className="flex items-center justify-between w-full relative max-w-2xl border-zinc-200 dark:border-zinc-700 mx-auto pt-8 pb-8 sm:pb-16  text-font-dark dark:text-font-light bg-theme-light  dark:bg-theme-dark bg-opacity-60">
           <div className="ml-[-0.60rem]">
             <MobileMenu />
             <NavItem href="/" text="Home" />
@@ -77,7 +77,7 @@ export default function Layout(props: LayoutProps) {
             <NavItem href="/projects" text="Projects" />
             {/* Resume Link */}
             <a
-              className="font-normal text-light-theme-1 dark:text-stone-400 hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-700 hover:dark:text-dark-theme-1 transition-all cursor-pointer"
+              className="font-normal text-zinc-600 dark:text-zinc-400 hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-zinc-200 hover:text-zinc-800 dark:hover:bg-zinc-800 transition-all cursor-pointer"
               href="https://drive.google.com/file/d/1aJLItUUP6N5ppNxFqh2ZfvN16mGWZ9h3/view?usp=sharing"
               rel="noreferrer"
               target="_blank"
@@ -89,7 +89,7 @@ export default function Layout(props: LayoutProps) {
           <button
             aria-label="Toggle Dark Mode"
             type="button"
-            className="w-9 h-9 bg-stone-200 rounded-lg dark:bg-stone-600 flex items-center justify-center  hover:ring-2 ring-stone-300 transition-all"
+            className="w-9 h-9 bg-zinc-200 rounded-lg dark:bg-zinc-600 flex items-center justify-center  hover:ring-2 ring-zinc-400 transition-all"
             onClick={() => {
               setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
             }}
@@ -100,7 +100,7 @@ export default function Layout(props: LayoutProps) {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                className="w-5 h-5 text-stone-800 dark:text-stone-200"
+                className="w-5 h-5 text-zinc-800 dark:text-zinc-200"
               >
                 {resolvedTheme === 'dark' ? (
                   <path
@@ -122,7 +122,7 @@ export default function Layout(props: LayoutProps) {
           </button>
         </nav>
       </div>
-      <main className="flex flex-col justify-center px-8 bg-light-theme-0 dark:bg-dark-theme-0">
+      <main className="flex flex-col justify-center px-8 bg-theme-light dark:bg-theme-dark">
         {children}
         <Footer />
       </main>

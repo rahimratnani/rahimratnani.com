@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import styles from './../styles//mobile-menu.module.css';
+import styles from './../styles/mobile-menu.module.css';
 import useDelayedRender from '../hooks/useDelayedRender';
 
 export default function MobileMenu() {
@@ -45,41 +45,47 @@ export default function MobileMenu() {
         <ul
           className={`${
             styles.menu
-          } flex flex-col absolute bg-light-theme-0 dark:bg-dark-theme-0 ${
+          } flex flex-col absolute bg-theme-light dark:bg-theme-dark ${
             isMenuRendered ? styles.menuRendered : ''
           }`}
         >
           <li
-            className="border-b border-stone-300 dark:border-stone-700 text-light-theme-1 dark:text-dark-theme-1 text-sm font-semibold"
+            className="border-b border-zinc-300 dark:border-zinc-700 text-font-dark dark:text-font-light text-sm font-semibold"
             style={{ transitionDelay: '150ms' }}
           >
             <Link href="/">
-              <a className="flex w-auto pb-4">Home</a>
+              <a className="flex w-auto pb-4 hover:text-primary max-w-min active:text-primary">
+                Home
+              </a>
             </Link>
           </li>
           <li
-            className="border-b border-stone-300 dark:border-stone-700 text-light-theme-1 dark:text-dark-theme-1 text-sm font-semibold"
+            className="border-b border-zinc-300 dark:border-zinc-700 text-font-dark dark:text-font-light text-sm font-semibold"
             style={{ transitionDelay: '175ms' }}
           >
             <Link href="/about">
-              <a className="flex w-auto pb-4">About</a>
+              <a className="flex w-auto pb-4 hover:text-primary max-w-min">
+                About
+              </a>
             </Link>
           </li>
           <li
-            className="border-b border-stone-300 dark:border-stone-700 text-light-theme-1 dark:text-dark-theme-1 text-sm font-semibold"
+            className="border-b border-zinc-300 dark:border-zinc-700 text-font-dark dark:text-font-light text-sm font-semibold"
             style={{ transitionDelay: '200ms' }}
           >
             <Link href="/projects">
-              <a className="flex w-auto pb-4">Projects</a>
+              <a className="flex w-auto pb-4 hover:text-primary max-w-min">
+                Projects
+              </a>
             </Link>
           </li>
           <li
-            className="border-b border-stone-300 dark:border-stone-700 text-light-theme-1 dark:text-dark-theme-1 text-sm font-semibold"
+            className="border-b border-zinc-300 dark:border-zinc-700 text-font-dark dark:text-font-light text-sm font-semibold"
             style={{ transitionDelay: '250ms' }}
           >
             <Link href="/resume">
               <a
-                className="flex w-auto pb-4"
+                className="flex w-auto pb-4 hover:text-primary max-w-min"
                 href="https://drive.google.com/file/d/1aJLItUUP6N5ppNxFqh2ZfvN16mGWZ9h3/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
@@ -97,7 +103,7 @@ export default function MobileMenu() {
 function MenuIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg
-      className="h-5 w-5 absolute text-stone-900 dark:text-stone-100"
+      className="h-5 w-5 absolute text-zinc-900 dark:text-zinc-100"
       width="20"
       height="20"
       viewBox="0 0 20 20"
@@ -125,7 +131,7 @@ function MenuIcon(props: JSX.IntrinsicElements['svg']) {
 function CrossIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg
-      className="h-5 w-5 absolute text-stone-900 dark:text-stone-100"
+      className="h-5 w-5 absolute text-zinc-900 dark:text-zinc-100"
       viewBox="0 0 24 24"
       width="24"
       height="24"
