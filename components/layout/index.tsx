@@ -26,6 +26,35 @@ function NavItem({ href, text }: { href: string; text: string }) {
   );
 }
 
+const DarkModeIcon = ({ theme }: { theme: string | undefined }) => {
+  return theme === 'dark' ? (
+    <svg
+      stroke="currentColor"
+      fill="currentColor"
+      strokeWidth="0"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-5 h-5 text-zinc-800 dark:text-zinc-200 group-hover:text-primary"
+    >
+      <path fill="none" d="M0 0h24v24H0z"></path>
+      <path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"></path>
+    </svg>
+  ) : (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="w-5 h-5 text-zinc-800 dark:text-zinc-200 group-hover:text-primary"
+    >
+      <path
+        fillRule="evenodd"
+        d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+};
+
 interface LayoutProps {
   children: ReactNode | ReactNode[];
   title?: string;
@@ -86,7 +115,7 @@ export default function Layout(props: LayoutProps) {
             </a>
           </div>
           {/* Dark mode button */}
-          <button
+          {/* <button
             aria-label="Toggle Dark Mode"
             type="button"
             className="w-9 h-9 bg-zinc-200 rounded-lg dark:bg-zinc-600 flex items-center justify-center  hover:ring-2 ring-zinc-400 transition-all"
@@ -119,6 +148,17 @@ export default function Layout(props: LayoutProps) {
                 )}
               </svg>
             )}
+          </button> */}
+
+          <button
+            aria-label="Toggle Dark Mode"
+            type="button"
+            className="w-9 h-9 bg-zinc-200 dark:bg-zinc-600 rounded-lg flex items-center justify-center border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 hover:ring-2 ring-blue-400 transition-all group"
+            onClick={() => {
+              setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+            }}
+          >
+            {mounted && <DarkModeIcon theme={resolvedTheme} />}
           </button>
         </nav>
       </div>
