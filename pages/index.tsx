@@ -31,8 +31,8 @@ const Home: NextPage = () => {
 
           <div className="">
             <p className="text-center text-base sm:text-lg">
-              I&apos;m a full-stack web developer from India. Though keeps
-              changing, my current focus is React.js, Node.js, and TypeScript.
+              I&apos;m a full-stack web developer from India. I primarily use
+              Node.js, React.js, and TypeScript to bring ideas into reality.
             </p>
           </div>
 

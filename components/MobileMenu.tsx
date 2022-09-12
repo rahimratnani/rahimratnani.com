@@ -103,26 +103,16 @@ export default function MobileMenu() {
 function MenuIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg
-      className="h-5 w-5 absolute text-zinc-900 dark:text-zinc-100"
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="h-6 w-6 absolute text-zinc-900 dark:text-zinc-100"
       {...props}
     >
       <path
-        d="M2.5 7.5H17.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M2.5 12.5H17.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        fillRule="evenodd"
+        d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+        clipRule="evenodd"
       />
     </svg>
   );
@@ -131,20 +121,18 @@ function MenuIcon(props: JSX.IntrinsicElements['svg']) {
 function CrossIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg
-      className="h-5 w-5 absolute text-zinc-900 dark:text-zinc-100"
+      xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      width="24"
-      height="24"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
+      fill="currentColor"
+      className="h-6 w-6 absolute text-zinc-900 dark:text-zinc-100"
       shapeRendering="geometricPrecision"
       {...props}
     >
-      <path d="M18 6L6 18" />
-      <path d="M6 6l12 12" />
+      <path
+        fillRule="evenodd"
+        d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+        clipRule="evenodd"
+      />
     </svg>
   );
 }

@@ -6,6 +6,7 @@ import Head from 'next/head';
 
 import MobileMenu from '../MobileMenu';
 import Footer from '../Footer';
+import Logo from '../Logo';
 
 function NavItem({ href, text }: { href: string; text: string }) {
   const router = useRouter();
@@ -34,7 +35,7 @@ const DarkModeIcon = ({ theme }: { theme: string | undefined }) => {
       strokeWidth="0"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-5 h-5 text-zinc-800 dark:text-zinc-200 group-hover:text-primary"
+      className="w-5 md:w-6 h-5 md:h-6 text-zinc-800 dark:text-zinc-200 group-hover:text-primary"
     >
       <path fill="none" d="M0 0h24v24H0z"></path>
       <path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"></path>
@@ -44,7 +45,7 @@ const DarkModeIcon = ({ theme }: { theme: string | undefined }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className="w-5 h-5 text-zinc-800 dark:text-zinc-200 group-hover:text-primary"
+      className="w-5 md:w-6 h-5 md:h-6 text-zinc-800 dark:text-zinc-200 group-hover:text-primary"
     >
       <path
         fillRule="evenodd"
@@ -99,8 +100,13 @@ export default function Layout(props: LayoutProps) {
       </Head>
       <div className="flex flex-col justify-center px-8 bg-theme-light dark:bg-theme-dark">
         <nav className="flex items-center justify-between w-full relative max-w-2xl border-zinc-200 dark:border-zinc-700 mx-auto pt-8 pb-8 sm:pb-16  text-font-dark dark:text-font-light bg-theme-light  dark:bg-theme-dark bg-opacity-60">
-          <div className="ml-[-0.60rem]">
-            <MobileMenu />
+          <Link href="/">
+            <a className="ml-[-0.45rem]">
+              <Logo />
+            </a>
+          </Link>
+          <div className="">
+            {/* <MobileMenu /> */}
             <NavItem href="/" text="Home" />
             <NavItem href="/about" text="About" />
             <NavItem href="/projects" text="Projects" />
@@ -114,18 +120,23 @@ export default function Layout(props: LayoutProps) {
               <span className="capsize">{'Resume'}</span>
             </a>
           </div>
-          {/* Dark mode button */}
 
-          <button
-            aria-label="Toggle Dark Mode"
-            type="button"
-            className="w-9 h-9 bg-zinc-200 dark:bg-zinc-600 rounded-lg flex items-center justify-center border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 hover:ring-2 ring-blue-400 transition-all group"
-            onClick={() => {
-              setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
-            }}
-          >
-            {mounted && <DarkModeIcon theme={resolvedTheme} />}
-          </button>
+          <div className="flex gap-2 justify-center items-center">
+            <button
+              aria-label="Toggle Dark Mode"
+              type="button"
+              className="w-10 h-10 rounded-lg flex items-center justify-center border border-transparent transition-all group"
+              onClick={() => {
+                setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+              }}
+            >
+              {mounted && <DarkModeIcon theme={resolvedTheme} />}
+            </button>
+
+            <div className="visible md:hidden">
+              <MobileMenu />
+            </div>
+          </div>
         </nav>
       </div>
       <main className="flex flex-col justify-center px-8 bg-theme-light dark:bg-theme-dark">
