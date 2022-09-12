@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import styles from './../styles//mobile-menu.module.css';
+import styles from './../styles/mobile-menu.module.css';
 import useDelayedRender from '../hooks/useDelayedRender';
 
 export default function MobileMenu() {
@@ -45,41 +45,47 @@ export default function MobileMenu() {
         <ul
           className={`${
             styles.menu
-          } flex flex-col absolute bg-light-theme-0 dark:bg-dark-theme-0 ${
+          } flex flex-col absolute bg-theme-light dark:bg-theme-dark ${
             isMenuRendered ? styles.menuRendered : ''
           }`}
         >
           <li
-            className="border-b border-stone-300 dark:border-stone-700 text-light-theme-1 dark:text-dark-theme-1 text-sm font-semibold"
+            className="text-font-dark dark:text-font-light text-lg font-semibold"
             style={{ transitionDelay: '150ms' }}
           >
             <Link href="/">
-              <a className="flex w-auto pb-4">Home</a>
+              <a className="flex w-auto pb-4 hover:text-primary max-w-min active:text-primary">
+                Home
+              </a>
             </Link>
           </li>
           <li
-            className="border-b border-stone-300 dark:border-stone-700 text-light-theme-1 dark:text-dark-theme-1 text-sm font-semibold"
+            className="text-font-dark dark:text-font-light text-lg font-semibold"
             style={{ transitionDelay: '175ms' }}
           >
             <Link href="/about">
-              <a className="flex w-auto pb-4">About</a>
+              <a className="flex w-auto pb-4 hover:text-primary max-w-min">
+                About
+              </a>
             </Link>
           </li>
           <li
-            className="border-b border-stone-300 dark:border-stone-700 text-light-theme-1 dark:text-dark-theme-1 text-sm font-semibold"
+            className="text-font-dark dark:text-font-light text-lg font-semibold"
             style={{ transitionDelay: '200ms' }}
           >
             <Link href="/projects">
-              <a className="flex w-auto pb-4">Projects</a>
+              <a className="flex w-auto pb-4 hover:text-primary max-w-min">
+                Projects
+              </a>
             </Link>
           </li>
           <li
-            className="border-b border-stone-300 dark:border-stone-700 text-light-theme-1 dark:text-dark-theme-1 text-sm font-semibold"
+            className="text-font-dark dark:text-font-light text-lg font-semibold"
             style={{ transitionDelay: '250ms' }}
           >
             <Link href="/resume">
               <a
-                className="flex w-auto pb-4"
+                className="flex w-auto pb-4 hover:text-primary max-w-min"
                 href="https://drive.google.com/file/d/1aJLItUUP6N5ppNxFqh2ZfvN16mGWZ9h3/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
@@ -97,26 +103,16 @@ export default function MobileMenu() {
 function MenuIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg
-      className="h-5 w-5 absolute text-stone-900 dark:text-stone-100"
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="h-6 w-6 absolute text-zinc-900 dark:text-zinc-100"
       {...props}
     >
       <path
-        d="M2.5 7.5H17.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M2.5 12.5H17.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        fillRule="evenodd"
+        d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+        clipRule="evenodd"
       />
     </svg>
   );
@@ -125,20 +121,18 @@ function MenuIcon(props: JSX.IntrinsicElements['svg']) {
 function CrossIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg
-      className="h-5 w-5 absolute text-stone-900 dark:text-stone-100"
+      xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      width="24"
-      height="24"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
+      fill="currentColor"
+      className="h-6 w-6 absolute text-zinc-900 dark:text-zinc-100"
       shapeRendering="geometricPrecision"
       {...props}
     >
-      <path d="M18 6L6 18" />
-      <path d="M6 6l12 12" />
+      <path
+        fillRule="evenodd"
+        d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+        clipRule="evenodd"
+      />
     </svg>
   );
 }

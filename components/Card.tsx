@@ -20,7 +20,7 @@ export default function Card({
 }: Props) {
   return (
     <div className="p-4 md:w-1/2 max-w-[544px]">
-      <div className="h-full overflow-hidden rounded-md border-2 border-stone-200 border-opacity-60 dark:border-stone-700">
+      <div className="h-full overflow-hidden rounded-md border-2 border-zinc-200 border-opacity-60 dark:border-zinc-700">
         <Image
           alt={title}
           src={imgSrc}
@@ -30,15 +30,15 @@ export default function Card({
         />
 
         <div className="p-6">
-          <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight text-light-theme-1 dark:text-dark-theme-1">
+          <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight text-font-dark dark:text-font-light">
             {title}
           </h2>
 
-          <p className="mb-3 max-w-none text-base text-stone-500 dark:text-stone-400">
+          <p className="mb-3 max-w-none text-base text-zinc-500 dark:text-zinc-400">
             {description}
           </p>
 
-          <ul className="mb-3 flex justify-start flex-wrap max-w-none text-[13px] font-semibold text-stone-500 dark:text-stone-400">
+          <ul className="mb-3 flex justify-start flex-wrap max-w-none text-[13px] font-semibold text-zinc-500 dark:text-zinc-400">
             {techStack.map((str) => (
               <li className="mr-3" key={str}>
                 {str}
@@ -49,7 +49,7 @@ export default function Card({
           <div className="w-full flex flex-col space-y-2">
             <Link href={live}>
               <a
-                className="text-base font-medium leading-6 text-light-theme-1 dark:text-dark-theme-1 group"
+                className="text-base font-medium leading-6 text-primary group"
                 aria-label={`Link to ${title}`}
                 target="_blank"
               >
@@ -61,7 +61,7 @@ export default function Card({
             </Link>
             <Link href={github}>
               <a
-                className="text-base font-medium leading-6 text-light-theme-1 dark:text-dark-theme-1 group"
+                className="text-base font-medium leading-6 text-primary group"
                 aria-label={`Link to ${title}`}
                 target="_blank"
               >

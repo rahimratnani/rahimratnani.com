@@ -46,13 +46,13 @@
 }
 
 .menuRendered li {
-  @apply border-stone-200 dark:border-stone-600 w-full;
+  @apply border-zinc-200 dark:border-zinc-600 w-full;
   transform: translateX(0);
   opacity: 1;
 }
 
 .menu > * + * {
-  margin-top: 24px;
+  margin-top: 20px;
 }
 
 @keyframes grow {

@@ -19,10 +19,6 @@
   src: url('/fonts/Inter-italic.var.woff2') format('woff2');
 }
 
-::selection {
-  @apply bg-highlight-light dark:bg-highlight-dark text-light-theme-1 dark:text-white;
-}
-
 html {
   min-width: 360px;
   scroll-behavior: smooth;
@@ -30,7 +26,7 @@ html {
 }
 
 #__next {
-  @apply bg-light-theme-0 dark:bg-dark-theme-0;
+  @apply bg-theme-light dark:bg-theme-dark;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -45,6 +41,5 @@ html {
 .capsize::after {
   content: '';
   margin-top: -0.098em;
-  /* margin-top: -0.219em; */
   display: table;
 }
