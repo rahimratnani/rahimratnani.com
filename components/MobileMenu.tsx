@@ -50,7 +50,7 @@ export default function MobileMenu() {
           }`}
         >
           <li
-            className="border-b border-zinc-300 dark:border-zinc-700 text-font-dark dark:text-font-light text-sm font-semibold"
+            className="text-font-dark dark:text-font-light text-lg font-semibold"
             style={{ transitionDelay: '150ms' }}
           >
             <Link href="/">
@@ -60,7 +60,7 @@ export default function MobileMenu() {
             </Link>
           </li>
           <li
-            className="border-b border-zinc-300 dark:border-zinc-700 text-font-dark dark:text-font-light text-sm font-semibold"
+            className="text-font-dark dark:text-font-light text-lg font-semibold"
             style={{ transitionDelay: '175ms' }}
           >
             <Link href="/about">
@@ -70,7 +70,7 @@ export default function MobileMenu() {
             </Link>
           </li>
           <li
-            className="border-b border-zinc-300 dark:border-zinc-700 text-font-dark dark:text-font-light text-sm font-semibold"
+            className="text-font-dark dark:text-font-light text-lg font-semibold"
             style={{ transitionDelay: '200ms' }}
           >
             <Link href="/projects">
@@ -80,7 +80,7 @@ export default function MobileMenu() {
             </Link>
           </li>
           <li
-            className="border-b border-zinc-300 dark:border-zinc-700 text-font-dark dark:text-font-light text-sm font-semibold"
+            className="text-font-dark dark:text-font-light text-lg font-semibold"
             style={{ transitionDelay: '250ms' }}
           >
             <Link href="/resume">
