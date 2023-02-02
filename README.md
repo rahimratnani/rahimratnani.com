@@ -17,7 +17,7 @@ $ cd rahimratnani.com
 $ npm install
 
 # Start development server
-$ npm dev
+$ npm run dev
 ```
 
 ## Technologies Used
