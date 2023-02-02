@@ -86,7 +86,7 @@ export default function MobileMenu() {
             <Link href="/resume">
               <a
                 className="flex w-auto pb-4 hover:text-primary max-w-min"
-                href="https://drive.google.com/file/d/1aJLItUUP6N5ppNxFqh2ZfvN16mGWZ9h3/view?usp=sharing"
+                href="/RAHIM_RATNANI_Resume.pdf"
                 target="_blank"
                 rel="noreferrer"
               >
