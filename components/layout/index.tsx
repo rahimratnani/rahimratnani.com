@@ -113,7 +113,7 @@ export default function Layout(props: LayoutProps) {
             {/* Resume Link */}
             <a
               className="font-normal text-zinc-600 dark:text-zinc-400 hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-zinc-200 hover:text-zinc-800 dark:hover:bg-zinc-800 transition-all cursor-pointer"
-              href="/RAHIM_RATNANI_Resume.pdf"
+              href="/rahim_ratnani_resume.pdf"
               rel="noreferrer"
               target="_blank"
             >
