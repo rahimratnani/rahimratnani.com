@@ -38,15 +38,7 @@ const About: NextPage = () => {
           </p>
 
           <p>
-            Aside from that, I&apos;m also an{' '}
-            <a
-              href="https://www.goodreads.com/rahim_ratnani"
-              target="_blank"
-              rel="noreferrer"
-            >
-              avid reader
-            </a>
-            . My favorite genres are sci-fi and fantasy. When I&apos;m not
+            Aside from that, I&apos;m also an avid reader. My favorite genres are sci-fi and fantasy. When I&apos;m not
             coding, you&apos;ll probably find me reading something on my Kindle
             or tinkering with my computer.
           </p>
